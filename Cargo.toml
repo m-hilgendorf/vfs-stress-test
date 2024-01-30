@@ -1,0 +1,19 @@
+[package]
+name = "vfs-stress-test"
+version = "0.1.0"
+edition = "2021"
+
+[[bench]]
+name = "vfs"
+harness = false
+
+[dependencies]
+futures = "0.3"
+serde_json = "1"
+tangram_client = { path = "../tangram/packages/client" }
+tangram_error = { path = "../tangram/packages/error" }
+tokio = { version = "1", features = ["full"] }
+rand = "0.8.5"
+
+[dev-dependencies]
+criterion = "0.3"
